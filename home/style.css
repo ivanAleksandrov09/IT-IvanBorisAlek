@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: #f2f2f2;
+    justify-content: space-around;
+    align-items: center;
+    height: 3vh;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbaar a:hover {
+    cursor: pointer;
+}
