@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -8,10 +12,10 @@
 }
 
 .navbar a {
-    text-decoration: none;
+    text-decoration: none; /* removes underline */
     color: black;
 }
 
-.navbaar a:hover {
+.navbar a:hover {
     cursor: pointer;
 }
