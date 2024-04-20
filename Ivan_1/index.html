@@ -6,17 +6,38 @@
     <title>Ivan_1</title>
 </head>
 <body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="../home/home.html">Home</a></li>
-            <li><a href="../Ivan_1/index.html">Ivan 1</a></li>
-            <li><a href="#Ivan_2">Ivan 2</a></li>
-            <li><a href="#Boris_1">Boris 1</a></li>
-            <li><a href="#Boris 2">Boris 2</a></li>
-            <li><a href="#Alek_1">Alek 1</a></li>
-            <li><a href="#Alek_2">Alek 2</a></li>
-        </ul>
-    </nav>
+    <div class="topnav" id="myTopnav">
+      <a href="../home/home.html">Home</a>
+      <a href="#about">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Ivan
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../Ivan_1/index.html">Boat</a>
+          <a href="../Ivan_2/index.html">Submarine</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Boris
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../Boris_1/index.html">Cycle</a>
+          <a href="../Boris_2/index.html">Cars</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Aleksandar
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../Alek_1/index.html">Plane</a>
+          <a href="../Alek_2/index.html">Deltaplaner</a>
+        </div>
+      </div>
+    </div>
+      
 
     <main>
         <div id="info-block">
@@ -39,5 +60,6 @@
     </main>
 
     <script src="functions.js"></script>
+    <script src="../home/dropMenu.js"></script>
 </body>
 </html>
