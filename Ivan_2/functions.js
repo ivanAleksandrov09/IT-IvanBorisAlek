@@ -1,10 +1,11 @@
 
 const pressure_button = document.getElementById("pressure-button");
-const pressure_input = document.getElementById("depth");
-const pressure_result = document.getElementById("pressure-result");
+
 
 pressure_button.addEventListener("click", () => {
-    let depth = pressure_input.value;
+    const pressure_result = document.getElementById("pressure-result");
+    
+    let depth = document.getElementById("depth").value;
     let unit = document.getElementById("pressure-unit").value;
     let result;
 
