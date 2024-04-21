@@ -1,44 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../home/style.css" />
-
-<title>Transportation</title>
+    <link rel="stylesheet" href="../home/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bicycles</title>
 </head>
 <body>
+    <div class="topnav" id="myTopnav">
+      <a href="../home/home.html">Home</a>
+      <a href="#about">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Ivan
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../Ivan_1/index.html">Boat</a>
+          <a href="../Ivan_2/index.html">Submarine</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Boris
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../Boris_1/index.html">Cycle</a>
+          <a href="../Boris_2/index.html">Cars</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Aleksandar
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../Alek_1/index.html">Plane</a>
+          <a href="../Alek_2/index.html">Deltaplaner</a>
+        </div>
+      </div>
+    </div>
+      
 
-<div class="topnav" id="myTopnav">
-  <a href="../home/home.html">Home</a>
-  <a href="#about">About</a>
-  <div class="dropdown">
-    <button class="dropbtn">Ivan
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="../Ivan_1/index.html">Boat</a>
-      <a href="../Ivan_2/index.html">Submarine</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Boris
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="../Boris_1/index.html">Cycle</a>
-      <a href="../Boris_2/index.html">Cars</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Aleksandar
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="../Alek_1/index.html">Plane</a>
-      <a href="../Alek_2/index.html">Deltaplaner</a>
-    </div>
-  </div>
-</div>
+    <main>
+        <div id="info-block">
+            <div class="text-block">
+                <h1>Bicycles</h1>
+                <p>Bicycles are a common means of transportation and recreation. There are many different types <br>
+                  of bicycles, each designed for specific purposes. Some common types of bicycles include:</p>
+                <ul>
+                  <li><button id="roadbike">Road Bike: Built for speed and efficiency on paved surfaces.</button></li>
+                  <li><button id="mountainbike">Mountain Bike: Designed for off-road cycling on rough terrain.</button></li>
+                  <li><button id="hybridbike">Hybrid Bike: Combines features of road and mountain bikes for versatility, sometimes even with a electrical battery to help riding it and use it as some sort of motor.</button></li>
+                  <li><button id="citybike">City Bike: Ideal for urban commuting and leisurely rides.</button></li>
+                </ul>
+            </div>
 
-<script src="../home/dropMenu.js"></script>
+            <div class="image-container">
+              <img src="https://c02.purpledshub.com/uploads/sites/39/2019/01/every-type-of-bike-c052991.jpg?w=775&webp=1" alt="5 different bikes" width="70%" height="35%" id="image-id" style="margin: 20%; border-radius: 15px;">
+            </div>
+        </div>
+
+      <h1>Calories Burned and Distance Calculator</h1>
+    <form>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" required><br><br>
+        <label for="speed">Speed (km/h):</label>
+        <input type="number" id="speed" required><br><br>
+        <label for="time">Time (hours):</label>
+        <input type="number" id="time" required><br><br>
+        <label for="intensity">Intensity:</label>
+        <select id="intensity" required>
+            <option value="4">Low</option>
+            <option value="6">Moderate</option>
+            <option value="8">High</option>
+        </select><br><br>
+        <button type="button" onclick="calculateCaloriesBurned()">Calculate</button>
+        <div id="result"></div>
+    </form>
+        <div id="result"></div>
+    </main>
+
+    <script src="../Boris1/functions.js"></script>
+    <script src="../home/dropMenu.js"></script>
 </body>
 </html>
