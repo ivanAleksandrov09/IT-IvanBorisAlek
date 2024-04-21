@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../home/style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 
 <title>Transportation</title>
 </head>
@@ -38,7 +39,36 @@
     </div>
   </div>
 </div>
+`
+<main>
+  <div id="info-block">
+    <div class="text-block">
+      <h1>Water transportation: Submarine</h1>
+      <p>Submarines are watercraft that are capable of operating underwater. <br>They are used for a variety of purposes, including military, scientific, and commercial applications.<br> Submarines are equipped with a variety of systems and technologies that allow them to navigate and operate underwater,<br> including ballast tanks, propulsion systems, and sonar systems. <br>Submarines are typically powered by nuclear reactors or diesel engines, and can travel at high speeds and depths. <br>They are used for a variety of missions, including surveillance, reconnaissance, and combat operations.</p>
+    </div>
+    <div class="image-container">
+      <img src="https://www.edrmagazine.eu/wp-content/uploads/2024/03/Naval-Group-submarines-the-Netherlands.jpg" width="512" height="341" class="image-id">
+    </div>
+  </div>
 
+  <div class="interactives-container">
+    <div class="pressure-calculator-container">
+      <h2>Calculate pressure at depth!</h2>
+
+      <label for="depth">Enter depth in meters:</label>
+      <input type="number" id="depth" name="depth" min="0" max="10000">
+      <select id="pressure-unit">
+        <option value="Pa">Pascals</option>
+        <option value="bars">Bars</option>
+      </select>
+
+      <button id="pressure-button">Calculate</button>
+
+      <p id="pressure-result">Result: </p>
+    </div>
+  </div>
+</main>
 <script src="../home/dropMenu.js"></script>
+<script src="functions.js"></script>
 </body>
 </html>
