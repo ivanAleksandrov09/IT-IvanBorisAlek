@@ -26,7 +26,7 @@ trip_button.addEventListener('click', () => {
     let distance = document.getElementById("trip-distance").value;
     let speed = document.getElementById("trip-speed").value;
 
-    let hours = distance / speed;
+    let hours = (distance / speed).toFixed(2);
     let days = Math.floor(hours / 24);
 
     result_output.innerHTML += hours + " hours!";

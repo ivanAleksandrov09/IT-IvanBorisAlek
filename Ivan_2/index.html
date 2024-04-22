@@ -57,12 +57,14 @@
 
       <label for="depth">Enter depth in meters:</label>
       <input type="number" id="depth" name="depth" min="0" max="10000">
-      <select id="pressure-unit">
-        <option value="Pa">Pascals</option>
-        <option value="bars">Bars</option>
-      </select>
 
-      <button id="pressure-button">Calculate</button>
+      <div>
+        <button id="pressure-button">Calculate in: </button>
+        <select id="pressure-unit">
+          <option value="Pa">Pascals</option>
+          <option value="bars">Bars</option>
+        </select>
+      </div>
 
       <p id="pressure-result">Result: </p>
     </div>
