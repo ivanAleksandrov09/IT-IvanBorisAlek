@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="../home/style.css">
     <link rel="stylesheet" href="style.css">
-    <title>Bicycles</title>
+    <title>Ivan_1</title>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
@@ -42,7 +42,7 @@
     <main>
         <div id="info-block">
             <div class="text-block">
-                <h1>Bicycles</h1>
+                <h1>Land transport: Bicycles</h1>
                 <p>Bicycles are a common means of transportation and recreation. There are many different types <br>
                   of bicycles, each designed for specific purposes. Some common types of bicycles include:</p>
                 <ul>
@@ -54,31 +54,24 @@
             </div>
 
             <div class="image-container">
-              <img src="https://c02.purpledshub.com/uploads/sites/39/2019/01/every-type-of-bike-c052991.jpg?w=775&webp=1" alt="5 different bikes" width="70%" height="35%" id="image-id" style="margin: 20%; border-radius: 15px;">
+                <img src="https://c02.purpledshub.com/uploads/sites/39/2019/01/every-type-of-bike-c052991.jpg?w=775&webp=1" width="400" height="200" id="image-id">
             </div>
         </div>
 
-      <h1>Calories Burned and Distance Calculator</h1>
-    <form>
-        <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" required><br><br>
-        <label for="speed">Speed (km/h):</label>
-        <input type="number" id="speed" required><br><br>
-        <label for="time">Time (hours):</label>
-        <input type="number" id="time" required><br><br>
-        <label for="intensity">Intensity:</label>
-        <select id="intensity" required>
-            <option value="4">Low</option>
-            <option value="6">Moderate</option>
-            <option value="8">High</option>
-        </select><br><br>
-        <button type="button" onclick="calculateCaloriesBurned()">Calculate</button>
-        <div id="result"></div>
-    </form>
-        <div id="result"></div>
+        <div id="interactives-container">
+          <div id="calories-burned">
+            <h2>Calculate your calories!</h2>
+            <label for="weight">Enter your weight (kg):</label>
+            <input type="number" id="calories-burned" name="weight">
+            <label for="time">Enter time (h):</label>
+            <input type="number" id="calouries-burned" name="time">
+            <button id="calories-button">Calculate</button>
+            <p id="calories-result">Result: </p>
+          </div>
+        <div>
     </main>
 
-    <script src="../Boris1/functions.js"></script>
-    <script src="../home/dropMenu.js"></script>
+  <script src="../Boris_1/function.js"></script>
+  <script src="../home/dropMenu.js"></script>
 </body>
 </html>
