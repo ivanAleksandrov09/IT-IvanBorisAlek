@@ -35,19 +35,25 @@
 }
 
 #RandomJet {
-    display: flex;
-    margin-top: 5%;
+    margin-top: 2%;
     justify-content: center;
     text-align: center;
     flex-direction: column;
 }
 
-#RandomJet button {
-    width: fit-content;
-    align-self: center;
-}
-
 #fighterJetImage {
     width: 30%;
     align-self: center; 
+}
+
+#JetButton {
+    margin-top: 5%;
+    justify-content: center;
+    text-align: center;
+}
+
+#JetButton button{
+    justify-content: center;
+    width: fit-content;
+    align-self: center;
 }

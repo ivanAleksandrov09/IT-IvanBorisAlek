@@ -11,6 +11,7 @@ function showRandomFighterJet() {
     let randomJet = fighterJets[randomIndex];
     document.getElementById("fighterJetName").textContent = randomJet.name;
     document.getElementById("fighterJetImage").src = randomJet.imageUrl;
+    document.getElementById("RandomJet").style.display = "block";
 }
 
 document.getElementById("randomButton").addEventListener("click", showRandomFighterJet);
