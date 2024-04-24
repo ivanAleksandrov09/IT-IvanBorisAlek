@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="../home/style.css" />
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <head>
+    <link rel="stylesheet" type="text/css" href="../home/style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Transportation</title>
+  </head>
 
-<title>Transportation</title>
-</head>
-<body>
+  <body>
 
-<div class="topnav" id="myTopnav">
-  <a href="../home/home.html">Home</a>
-  <a href="#about">About</a>
-  <div class="dropdown">
-    <button class="dropbtn">Ivan
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="../Ivan_1/index.html">Boat</a>
-      <a href="../Ivan_2/index.html">Submarine</a>
+  <header class="topnav" id="myTopnav">
+    <a href="../home/home.html">Home</a>
+    <a href="../about/index.html">About</a>
+      <div class="dropdown">
+      <button class="dropbtn">Ivan
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Ivan_1/index.html">Boat</a>
+        <a href="../Ivan_2/index.html">Submarine</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Boris
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="../Boris_1/index.html">Cycle</a>
-      <a href="../Boris_2/index.html">Cars</a>
+    <div class="dropdown">
+      <button class="dropbtn">Boris
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Boris_1/index.html">Cycle</a>
+        <a href="../Boris_2/index.html">Cars</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Aleksandar
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="../Alek_1/index.html">Plane</a>
-      <a href="../Alek_2/index.html">Fighter jet</a>
+    <div class="dropdown">
+      <button class="dropbtn">Aleksandar
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Alek_1/index.html">Plane</a>
+        <a href="../Alek_2/index.html">Fighter jet</a>
+      </div>
     </div>
-  </div>
-</div>
-`
-<main>
-  <div id="info-block">
-    <div class="text-block">
-      <h1>Water transportation: Submarine</h1>
-      <p>Submarines are watercraft that are capable of operating underwater. <br>They are used for a variety of purposes, including military, scientific, and commercial applications.<br> Submarines are equipped with a variety of systems and technologies that allow them to navigate and operate underwater,<br> including ballast tanks, propulsion systems, and sonar systems. <br>Submarines are typically powered by nuclear reactors or diesel engines, and can travel at high speeds and depths. <br>They are used for a variety of missions, including surveillance, reconnaissance, and combat operations.</p>
-    </div>
-    <div class="image-container">
-      <img src="https://www.edrmagazine.eu/wp-content/uploads/2024/03/Naval-Group-submarines-the-Netherlands.jpg" width="512" height="341" class="image-id">
-    </div>
-  </div>
+  </header>
 
-  <div class="interactives-container">
-    <div class="pressure-calculator-container">
-      <h2>Calculate pressure at depth!</h2>
-
-      <label for="depth">Enter depth in meters:</label>
-      <input type="number" id="depth" name="depth" min="0" max="10000">
-
-      <div>
-        <button id="pressure-button">Calculate in: </button>
-        <select id="pressure-unit">
-          <option value="Pa">Pascals</option>
-          <option value="bars">Bars</option>
-        </select>
+  <main>
+    <div id="info-block">
+      <div class="text-block">
+        <h1>Water transportation: Submarine</h1>
+        <p>Submarines are watercraft that are capable of operating underwater. <br>They are used for a variety of purposes, including military, scientific, and commercial applications.<br> Submarines are equipped with a variety of systems and technologies that allow them to navigate and operate underwater,<br> including ballast tanks, propulsion systems, and sonar systems. <br>Submarines are typically powered by nuclear reactors or diesel engines, and can travel at high speeds and depths. <br>They are used for a variety of missions, including surveillance, reconnaissance, and combat operations.</p>
       </div>
 
-      <p id="pressure-result">Result: </p>
+      <div class="image-container">
+        <img src="https://www.edrmagazine.eu/wp-content/uploads/2024/03/Naval-Group-submarines-the-Netherlands.jpg" width="512" height="341" class="image-id">
+      </div>
     </div>
-  </div>
-</main>
-<script src="../home/dropMenu.js"></script>
-<script src="functions.js"></script>
-</body>
+
+    <div class="interactives-container">
+      <div class="pressure-calculator-container">
+        <h2>Calculate pressure at depth!</h2>
+
+        <label for="depth">Enter depth in meters:</label>
+        <input type="number" id="depth" name="depth" min="0" max="10000">
+
+        <div>
+          <button id="pressure-button">Calculate in: </button>
+          <select id="pressure-unit">
+            <option value="Pa">Pascals</option>
+            <option value="bars">Bars</option>
+          </select>
+        </div>
+
+        <p id="pressure-result">Result: </p>
+      </div>
+
+      <div class="surface-time-calculator">
+        <h2>Calculate time to surface!</h2>
+
+        <label for="depth">Enter depth in meters:</label>
+        <input type="number" id="time-depth" name="depth">
+
+        <label for="speed">Enter speed in km/h:</label>
+        <input type="number" id="time-speed" name="speed">
+
+        <div>
+          <button id="time-button">Calculate in: </button>
+          <select id="time-unit">
+            <option value="seconds">Seconds</option>
+            <option value="minutes">Minutes</option>
+            <option value="hours">Hours</option>
+          </select>
+        </div>
+
+        <p id="time-result">Result: </p>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="sticky_footer">
+        <p>&copy; 2024 Transportation. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../home/dropMenu.js"></script>
+  <script src="functions.js"></script>
+  </body>
 </html>

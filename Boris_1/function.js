@@ -38,7 +38,11 @@ for (let i = 0; i < bikes.length; i++) {
     });
 }
 
-function calculateCaloriesBurned(weight, speed, time, intensity) {
+function calculateCaloriesBurned() {
+    let weight = parseFloat(document.getElementById("calories-weight").value);
+    let time = parseFloat(document.getElementById("calories-time").value);
+    let intensity = document.getElementById("calories-intensity").value;
+    
     let MET;
     switch (intensity) {
         case "low":
@@ -51,7 +55,7 @@ function calculateCaloriesBurned(weight, speed, time, intensity) {
             MET = 8; 
             break;
         default:
-            MET = 6; 
+            MET = customMET || 6;
     }
-    return (MET * weight * time) / 60;
+    document.getElementById("calories-result").innerHTML = "Result: " + ((MET * weight * time) / 60);
 }
