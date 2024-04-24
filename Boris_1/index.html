@@ -3,13 +3,13 @@
 <head>
     <link rel="stylesheet" href="../home/style.css">
     <link rel="stylesheet" href="style.css">
-    <title>Ivan_1</title>
+    <title>Land transpoet: Bicycles</title>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
       <a href="../home/home.html">Home</a>
-      <a href="#about">About</a>
-      <div class="dropdown">
+      <a href="../about/index.html">About</a>
+            <div class="dropdown">
         <button class="dropbtn">Ivan
           <i class="fa fa-caret-down"></i>
         </button>
@@ -23,7 +23,7 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="../Boris_1/index.html">Cycle</a>
+          <a href="../Boris_1/index.html">Bicycle</a>
           <a href="../Boris_2/index.html">Cars</a>
         </div>
       </div>
@@ -62,15 +62,25 @@
           <div id="calories-burned">
             <h2>Calculate your calories!</h2>
             <label for="weight">Enter your weight (kg):</label>
-            <input type="number" id="calories-burned" name="weight">
+            <input type="number" id="calories-weight" name="weight">
             <label for="time">Enter time (h):</label>
-            <input type="number" id="calouries-burned" name="time">
-            <button id="calories-button">Calculate</button>
+            <input type="number" id="calories-time" name="time">
+            <label for="intensity">Select intensity:</label>
+            <select id="calories-intensity" name="intensity">
+              <option value="low">Low</option>
+              <option value="moderate">Moderate</option>
+              <option value="high">High</option>
+            </select>
+            <button id="calories-button" onclick="calculateCaloriesBurned()">Calculate</button>
             <p id="calories-result">Result: </p>
           </div>
-        <div>
+        </div>        
     </main>
-
+    <footer>
+      <div class="sticky_footer">
+          <p>&copy; 2024 Transportation. All rights reserved.</p>
+      </div>
+  </footer>
   <script src="../Boris_1/function.js"></script>
   <script src="../home/dropMenu.js"></script>
 </body>

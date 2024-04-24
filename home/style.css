@@ -104,3 +104,12 @@ body {
 .card-button:hover {
     background-color: #21b014;
 }
+
+.sticky_footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #12640bfd;
+    border-radius: 5px;
+ }
