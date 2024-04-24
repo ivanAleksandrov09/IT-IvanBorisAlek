@@ -24,8 +24,8 @@ input {
 }
 
 #info-block image {
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
 }
 
 #info-block .text-block {
@@ -44,6 +44,7 @@ input {
 #interactives-container {
     display: flex;
     justify-content: center;
+    margin: 5%;
 }
 
 #trip-time, #fuel-calculator {
@@ -57,4 +58,3 @@ input {
     border-radius: 7px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-

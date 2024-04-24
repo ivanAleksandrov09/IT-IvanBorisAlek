@@ -18,3 +18,32 @@ for (let i = 0; i < boats.length; i++) {
         image.alt = boats[i];
     });
 }
+
+const trip_button = document.getElementById("trip-button");
+trip_button.addEventListener('click', () => {
+    const result_output = document.getElementById("trip-result");
+
+    let distance = document.getElementById("trip-distance").value;
+    let speed = document.getElementById("trip-speed").value;
+
+    let hours = (distance / speed).toFixed(2);
+    let days = Math.floor(hours / 24);
+
+    result_output.innerHTML += hours + " hours!";
+    if (hours > 24) {
+
+        result_output.innerHTML += `\nThat's over ${days} ${days > 1 ? "days!" : "day!"}`;
+    }
+});
+
+const fuel_button = document.getElementById("fuel-button");
+fuel_button.addEventListener('click', () => {
+    const result_output = document.getElementById("fuel-result");
+
+    let consumption = document.getElementById("fuel-consumption").value;
+    let distance = document.getElementById("fuel-distance").value;
+
+    let fuel = consumption * distance * 0.01;
+
+    result_output.innerHTML += fuel + " liters!";
+});

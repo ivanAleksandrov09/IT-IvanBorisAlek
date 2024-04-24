@@ -33,7 +33,7 @@
         </button>
         <div class="dropdown-content">
           <a href="../Alek_1/index.html">Plane</a>
-          <a href="../Alek_2/index.html">Deltaplaner</a>
+          <a href="../Alek_2/index.html">Fighter jet</a>
         </div>
       </div>
     </div>
@@ -54,9 +54,32 @@
             </div>
 
             <div class="image-container">
-                <img src="https://www.thoughtco.com/thmb/g8h6NnWWWVkm-KXNBgMx-0Edd2U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg" alt="" width="396" height="200" id="image-id">
+                <img src="https://www.thoughtco.com/thmb/g8h6NnWWWVkm-KXNBgMx-0Edd2U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg" alt="water" width="550" height="350" id="image-id">
             </div>
         </div>
+
+        <div id="interactives-container">
+          <div id="trip-time">
+            <h2>Calculate trip time!</h2>
+            <label for="distance">Enter distance (km):</label>
+            <input type="number" id="trip-distance" name="distance">
+            <label for="speed">Enter speed (km/h):</label>
+            <input type="number" id="trip-speed" name="speed">
+            <button id="trip-button">Calculate</button>
+            <p id="trip-result">Result: </p>
+          </div>
+
+          <div id="fuel-calculator">
+            <h2>Calculate fuel consumption!</h2>
+            <label for="fuel">Enter fuel consumption (l/100km):</label>
+            <input type="number" id="fuel-consumption" name="fuel">
+            <label for="distance">Enter distance (km):</label>
+            <input type="number" id="fuel-distance" name="distance">
+            <button id="fuel-button">Calculate</button>
+            <p id="fuel-result">Result: </p>
+        </div>
+
+        <div 
     </main>
 
     <script src="functions.js"></script>
