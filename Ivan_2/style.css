@@ -19,20 +19,22 @@ select {
     background-color: hsla(115, 80%, 38%, 0.3);
 }
 
-#info-block {
+.info-block {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top: 10%;
+    height: fit-content;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-#info-block image {
+.info-block image {
     width: fit-content;
     height: fit-content;
 }
 
-#info-block .text-block {
+.info-block .text-block {
     width: fit-content;
     height: fit-content;
     padding: 10px;
@@ -47,7 +49,7 @@ select {
     padding-bottom: 5%;
 }
 
-.interactives-container .pressure-calculator-container, .surface-time-calculator {
+.interactives-container .calculator-container {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 7px;
     padding: 10px;
@@ -56,6 +58,6 @@ select {
     align-items: center;
     row-gap: 5px;
     width: fit-content;
-    margin-top: 10%;
+    height: fit-content;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }

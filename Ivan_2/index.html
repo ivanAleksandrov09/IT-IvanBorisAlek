@@ -41,7 +41,7 @@
   </header>
 
   <main>
-    <div id="info-block">
+    <div class="info-block">
       <div class="text-block">
         <h1>Water transportation: Submarine</h1>
         <p>Submarines are watercraft that are capable of operating underwater. <br>They are used for a variety of purposes, including military, scientific, and commercial applications.<br> Submarines are equipped with a variety of systems and technologies that allow them to navigate and operate underwater,<br> including ballast tanks, propulsion systems, and sonar systems. <br>Submarines are typically powered by nuclear reactors or diesel engines, and can travel at high speeds and depths. <br>They are used for a variety of missions, including surveillance, reconnaissance, and combat operations.</p>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="interactives-container">
-      <div class="pressure-calculator-container">
+      <div class="calculator-container">
         <h2>Calculate pressure at depth!</h2>
 
         <label for="depth">Enter depth in meters:</label>
@@ -70,7 +70,7 @@
         <p id="pressure-result">Result: </p>
       </div>
 
-      <div class="surface-time-calculator">
+      <div class="calculator-container">
         <h2>Calculate time to surface!</h2>
 
         <label for="depth">Enter depth in meters:</label>
@@ -89,6 +89,36 @@
         </div>
 
         <p id="time-result">Result: </p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="text-block">
+        <h1>Sonars</h1>
+        <p>Sonar is a technique that uses sound propagation to navigate, <br>communicate with or detect objects on or under the surface of the water. <br>Two types of technology share the name "sonar":<br> passive sonar is essentially listening for the sound made by vessels;<br> active sonar is emitting pulses of sounds and listening for echoes. <br>Submarines rely on sonar to a greater extent than surface ships as they cannot use radar in water</p>
+      </div>
+
+      <div class="image-container">
+        <img src="https://japannews.yomiuri.co.jp/wp-content/uploads/2022/08/sonar.jpg" width="800" height="341" class="image-id">
+      </div>
+    </div>
+
+    <div class="interactives-container">
+      <div class="calculator-container">
+        <h2>Calculate target distance!</h2>
+
+        <label for="time">Enter the time of echo (round trip): </label>
+        <input type="number" id="water-time" name="time">
+
+        <div>
+          <button id="water-button">Calculate in:</button>
+          <select id="water-unit">
+            <option value="meters">Meters</option>
+            <option value="kilometers">Kilometers</option>
+          </select>
+        </div>
+
+        <p id="water-result">Result: </p>
       </div>
     </div>
   </main>

@@ -1,7 +1,7 @@
 
 const pressure_button = document.getElementById("pressure-button");
 const time_button = document.getElementById("time-button");
-
+const water_button = document.getElementById("water-button");
 
 pressure_button.addEventListener("click", () => {
     const pressure_result = document.getElementById("pressure-result");
@@ -43,4 +43,26 @@ time_button.addEventListener("click", () => {
     }
     
     
+});
+
+water_button.addEventListener("click", () => {
+    const water_result = document.getElementById("water-result");
+
+    let unit = document.getElementById("water-unit").value;
+    let time = document.getElementById("water-time").value;
+
+    let result = (1482 * time) / 2; // 1482 - approximate preditermined value for the speed of sound in water
+
+    if (unit === "kilometers") {
+        result /= 1000;
+    }
+
+    if (result == 1) {
+        unit = unit.slice(0, -1); // Removes the 's' from the unit
+    }
+    if (result % 1 != 0) {
+        water_result.innerHTML = `Result: ${result.toFixed(2)} ${unit}.`;
+    } else {
+        water_result.innerHTML = `Result: ${result} ${unit}.`;
+    }
 });
