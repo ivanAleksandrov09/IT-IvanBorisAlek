@@ -19,31 +19,42 @@ for (let i = 0; i < boats.length; i++) {
     });
 }
 
+function display_result(result_element_id, result, unit) {
+    const result_element = document.getElementById(result_element_id);
+    if (result == 1 && unit[unit.length - 1] == "s") {
+        unit = unit.slice(0, -1); // Removes the 's' from the unit
+    }
+    if (result % 1 != 0) {
+        result_element.innerHTML = `Result: ${result.toFixed(2)} ${unit}.`;
+    } else {
+        result_element.innerHTML = `Result: ${result} ${unit}.`;
+    }
+}
+
 const trip_button = document.getElementById("trip-button");
+const fuel_button = document.getElementById("fuel-button");
+
 trip_button.addEventListener('click', () => {
     const result_output = document.getElementById("trip-result");
 
     let distance = document.getElementById("trip-distance").value;
     let speed = document.getElementById("trip-speed").value;
 
-    let hours = (distance / speed).toFixed(2);
+    let hours = distance / speed;
     let days = Math.floor(hours / 24);
 
-    result_output.innerHTML += hours + " hours!";
+    display_result("trip-result", hours, "hours");
     if (hours > 24) {
 
         result_output.innerHTML += `\nThat's over ${days} ${days > 1 ? "days!" : "day!"}`;
     }
 });
 
-const fuel_button = document.getElementById("fuel-button");
 fuel_button.addEventListener('click', () => {
-    const result_output = document.getElementById("fuel-result");
-
     let consumption = document.getElementById("fuel-consumption").value;
     let distance = document.getElementById("fuel-distance").value;
 
     let fuel = consumption * distance * 0.01;
 
-    result_output.innerHTML += fuel + " liters!";
+    display_result("fuel-result", fuel, "liters");
 });

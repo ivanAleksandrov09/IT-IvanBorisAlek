@@ -3,9 +3,20 @@ const pressure_button = document.getElementById("pressure-button");
 const time_button = document.getElementById("time-button");
 const water_button = document.getElementById("water-button");
 
+
+function display_result(result_element_id, result, unit) {
+    const result_element = document.getElementById(result_element_id);
+    if (result == 1 && unit[unit.length - 1] == "s") {
+        unit = unit.slice(0, -1); // Removes the 's' from the unit
+    }
+    if (result % 1 != 0) {
+        result_element.innerHTML = `Result: ${result.toFixed(2)} ${unit}.`;
+    } else {
+        result_element.innerHTML = `Result: ${result} ${unit}.`;
+    }
+}
+
 pressure_button.addEventListener("click", () => {
-    const pressure_result = document.getElementById("pressure-result");
-    
     let depth = document.getElementById("depth").value;
     let unit = document.getElementById("pressure-unit").value;
     let result;
@@ -15,12 +26,10 @@ pressure_button.addEventListener("click", () => {
     } else {
         result = (depth / 10) + 1;
     }
-    pressure_result.innerHTML = `Result: ${result.toFixed(1)} ${unit}.`;
+    display_result("pressure-result", result, unit);
 });
 
 time_button.addEventListener("click", () => {
-    const time_result = document.getElementById("time-result");
-    
     let unit = document.getElementById("time-unit").value;
     let depth = document.getElementById("time-depth").value;
     let speed = document.getElementById("time-speed").value;
@@ -32,22 +41,10 @@ time_button.addEventListener("click", () => {
         result *= 3600;
     }
 
-
-    if (result === 1) {
-        unit = unit.slice(0, -1); // Removes the 's' from the unit
-    }
-    if (result % 1 !== 0) {
-        time_result.innerHTML = `Result: ${result.toFixed(2)} ${unit}.`;
-    } else {
-        time_result.innerHTML = `Result: ${result} ${unit}.`;
-    }
-    
-    
+    display_result("time-result", result, unit);
 });
 
 water_button.addEventListener("click", () => {
-    const water_result = document.getElementById("water-result");
-
     let unit = document.getElementById("water-unit").value;
     let time = document.getElementById("water-time").value;
 
@@ -57,12 +54,5 @@ water_button.addEventListener("click", () => {
         result /= 1000;
     }
 
-    if (result == 1) {
-        unit = unit.slice(0, -1); // Removes the 's' from the unit
-    }
-    if (result % 1 != 0) {
-        water_result.innerHTML = `Result: ${result.toFixed(2)} ${unit}.`;
-    } else {
-        water_result.innerHTML = `Result: ${result} ${unit}.`;
-    }
+    display_result("water-result", result, unit);
 });
