@@ -1,33 +1,49 @@
+img {
+    width: 400px;
+    height: 339px;
+}
+
+h4 {
+    text-align: center;
+    font-size: x-large;
+}
 .title-container {
     text-align: center;
 }
 
 .container {
+    height: 70vh;
     display: flex;
     overflow-x: scroll;
-    align-items: center;
+    overflow-y: hidden;
     margin: 3vh;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd;
     border-radius: 7px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .card {
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd;
     border-radius: 7px;
     padding: 2vh;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    width: fit-content;
+    height: 60vh;
+    width: 40vh;
     margin: 3vh;
     text-align: center;
 }
 
 .card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+    height: 8%;
     text-decoration: none;
     padding: 1vh;
     background-color: #21b014a6;
     color: white;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd;
     border-radius: 7px;
 }
 
