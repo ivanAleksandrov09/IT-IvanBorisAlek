@@ -1,6 +1,6 @@
 img {
-    width: 400px;
-    height: 339px;
+    width: auto;
+    height: auto;
 }
 
 h4 {
@@ -23,6 +23,8 @@ h4 {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 7px;
     padding: 2vh;
@@ -36,9 +38,9 @@ h4 {
 .card-button {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 40%;
+    align-items: center;    
     height: 8%;
+    margin-top: auto;
     text-decoration: none;
     padding: 1vh;
     background-color: #21b014a6;
