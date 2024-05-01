@@ -1,55 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  font-family: 'Manrope';
+  font-weight: 600;
+}
+
+
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+html::after {
+  background-image: linear-gradient(rgb(83, 69, 144) 0%, rgb(225, 81, 10) 100%);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+  z-index: -1;
+  }
+
 #info-block {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top:3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top:3%;
+  font-size: larger;
 }
 
 #info-block image {
-    width: fit-content;
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
 
 #info-block .text-block {
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 7px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: #191970;
+  width: fit-content;
+  height: fit-content;
+}
+
+#info-block h1 {
+  font-size: 60px;
+  font-weight: bolder;
+  margin-bottom: 1%;
 }
 
 #info-block button {
-    border: none;
-    border-radius: 7px;
-    background-color: hsl(0, 0%, 95%);
-    font-size: medium;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(144, 116, 255);
+  font-size: medium;
 }
 
 #info-block button:hover {
-    background-color: hsl(0, 0%, 60%);
-    cursor: pointer;
+  background-color: hsl(0, 0%, 75%);
+  cursor: pointer;
 }
 
 #info-block .text-block li {
-    margin: 5px;
+  margin: 5px;
 }
 
 .interactives {
-    display: flex;
-    margin-top: 7%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin-top: 7%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .RPM-calculator {
+  font-size: large;
+  text-align: center;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 7px;
+}
+
+.RPM-calculator h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#infoTable {
+  background-color: rgb(173, 162, 218);
+  margin-top: 25px;
+  border-collapse: collapse;
+  width: 100%;
+  }
+  
+  #infoTable th, #infoTable td {
+    background-color: rgb(173, 162, 218);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
     text-align: center;
-    padding: 10px;
-    width: fit-content;
-    height: fit-content;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 7px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  #infoTable th:hover, #infoTable td:hover {
+    background-color: #c09f9f;
+  }
+
+#FlightDetails {
+  font-size: large;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
