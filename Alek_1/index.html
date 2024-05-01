@@ -46,8 +46,8 @@
             <ul>
               <li><button id="jet" > Jet aircraft: Very fast planes with jet engines.</button></li>
               <li><button id="propeller" > Propeller aircraft: Planes that use propellers to thrust forward.</button></li>
-              <li><button id="rotor" > Rotorcraft: Aircraft which has rotors, like the helicopter. <u>(Click on me for a RPM calculator!)</u></button></li>
-              <li><button id="commercial" > Commercial aircraft: Planes with aircraft engines running on fuel stored in tanks.</button></li>
+              <li><button id="rotor" > Rotorcraft: Aircraft which has rotors, like the helicopter. (Interactive)</button></li>
+              <li><button id="commercial" > Commercial aircraft: Planes with aircraft engines running on fuel stored in tanks. (Interactive)</button></li>
             </ul>
         </div>
 
@@ -63,15 +63,49 @@
         <label for="speed">Enter exact time in seconds for the rotor to complete a full spin:</label>
         <input type="number" id="speed" name="speed" min="0" max="10000">
         <br><br>
-        <button id="rpm-button">Calculate in: </button>
+        <button id="rpm-button">Calculate</button>
     
         <p id="rpm-result">Result: </p>
       </div>
     </div>
 
+  <div id="FlightFetch" style="display: none">
+    <form autocomplete="off" id="FlightDetails">
+      <label for="originCity" style="margin-bottom: 10px;">Choose a European capital you want to fly from:</label>
+      <select id="originCity" style="margin-bottom: 20px;"></select>
+  
+      <label for="destinationCity" style="margin-bottom: 10px;">Choose a European capital you want to fly to:</label>
+      <select id="destinationCity" style="margin-bottom: 20px;"></select>
+  
+      <label for="flightDate" style="margin-bottom: 10px;">Choose a date in the future:</label>
+      <input type="date" id="flightDate" name="flightDate" style="margin-bottom: 40px;">
+  
+      <button type="button" id="searchButton">Search The cheapest flights!</button>
+  </form>
+  
+
+    <table id="infoTable">
+      <tr>
+        <th>Origin City</th>
+        <th>Origin Airport</th>
+        <th>Destination City</th>
+        <th>Destination Airport</th>
+        <th>Total Price (BGN)</th>
+        <th>Departure Time (Local Time)</th>
+        <th>Arrival Time (Local Time)</th>
+        <th>Flight type</th>
+        <th>Airline</th>
+      </tr>
+      <tbody id="flightTable">
+      </tbody>
+    </table>
+  </div>
+
+
     </main>
 
     <script src="functions.js"></script>
     <script src="../global/functions.js"></script>
+
   </body>
 </html>
