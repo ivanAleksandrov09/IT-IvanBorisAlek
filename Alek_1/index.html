@@ -38,52 +38,50 @@
       </div>
     </header>
 
-    <main>
-      <div id="info-block">
-        <div class="text-block">
-            <h1>Air transportation: Planes</h1>
-            <p>Planes are the most important transportations for long-distance travel. They can also be used to<br>carry cargo, firefighting, military purposes and to do fun activies like parachuting. Common airplanes are:</p>
-            <ul>
-              <li><button id="jet" > Jet aircraft: Very fast planes with jet engines.</button></li>
-              <li><button id="propeller" > Propeller aircraft: Planes that use propellers to thrust forward.</button></li>
-              <li><button id="rotor" > Rotorcraft: Aircraft which has rotors, like the helicopter. (Interactive)</button></li>
-              <li><button id="commercial" > Commercial aircraft: Planes with aircraft engines running on fuel stored in tanks. (Interactive)</button></li>
-            </ul>
-        </div>
-
-        <div class="image-container">
-          <img src="https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2023/12/727.jpg" alt="Commercial Boeing 727" width="500" height="300" id="image-id">
-        </div>
-      </div>
-
-    <div class="interactives">
-      <div class="RPM-calculator" style = "display: none;">
-        <h2>Calculate RPM (Revolutions per minute)!</h2>
-    
-        <label for="speed">Enter exact time in seconds for the rotor to complete a full spin:</label>
-        <input type="number" id="speed" name="speed" min="0" max="10000">
-        <br><br>
-        <button id="rpm-button">Calculate</button>
-    
-        <p id="rpm-result">Result: </p>
-      </div>
+<main>
+  <div id="info-block">
+    <div class="text-block">
+        <h1>Air transportation: Planes</h1>
+        <p>Planes are the most important transportations for long-distance travel. They can also be used to<br>carry cargo, firefighting, military purposes and to do fun activies like parachuting. Common airplanes are:</p>
+        <ul>
+          <li><button id="jet" > <em>Jet aircraft</em>: Very fast planes with jet engines.</button></li>
+          <li><button id="propeller" > <em>Propeller aircraft</em>: Planes that use propellers to thrust forward.</button></li>
+          <li><button id="rotor" > <em>Rotorcraft</em>: Aircraft which has rotors, like the helicopter. (Interactive)</button></li>
+          <li><button id="commercial" > <em>Commercial aircraft</em>: Planes with aircraft engines running on fuel stored in tanks. (Interactive)</button></li>
+        </ul>
     </div>
 
-  <div id="FlightFetch" style="display: none">
+    <div class="image-container">
+      <img src="https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2023/12/727.jpg" alt="Commercial Boeing 727" width="500" height="300" id="image-id">
+    </div>
+  </div>
+
+  <div class="RPM-calculator" style = "display: none;">
+    <h2>Calculate RPM (Revolutions per minute)!</h2>
+
+    <label for="speed">Enter exact time in seconds for the rotor to complete a full spin:</label>
+    <input type="number" id="speed" name="speed" min="0" max="10000">
+    <br><br>
+    <button id="rpm-button">Calculate</button>
+
+    <p id="rpm-result">Result: </p>
+  </div>
+
+  <div id="FlightProgram" style="display: none">
     <form autocomplete="off" id="FlightDetails">
       <label for="originCity" style="margin-bottom: 10px;">Choose a European capital you want to fly from:</label>
       <select id="originCity" style="margin-bottom: 20px;"></select>
-  
+
       <label for="destinationCity" style="margin-bottom: 10px;">Choose a European capital you want to fly to:</label>
       <select id="destinationCity" style="margin-bottom: 20px;"></select>
-  
+
       <label for="flightDate" style="margin-bottom: 10px;">Choose a date in the future:</label>
       <input type="date" id="flightDate" name="flightDate" style="margin-bottom: 40px;">
-  
-      <button type="button" id="searchButton">Search The cheapest flights!</button>
-  </form>
-  
 
+      <button type="button" id="searchButton">Search The cheapest flights!</button>
+
+      
+    </form>
     <table id="infoTable">
       <tr>
         <th>Origin City</th>
@@ -100,9 +98,7 @@
       </tbody>
     </table>
   </div>
-
-
-    </main>
+</main>
 
     <script src="functions.js"></script>
     <script src="../global/functions.js"></script>

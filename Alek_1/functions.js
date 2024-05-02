@@ -38,7 +38,11 @@ rpm_button.addEventListener("click", function() {
 
     result = 60 / speed;
 
-    rpm_result.innerHTML = `Result: ${result.toFixed(1)} RPM.`;
+    if (result < 0 || result > 10000) {
+        rpm_result.innerHTML = "This is too fast! Try again.";
+    } else {
+        rpm_result.innerHTML = `Result: ${result.toFixed(1)} RPM.`;
+    }
 });
 
 // ↓ Function for hiding the RPM Calculator when not in the rotor aircraft page.
@@ -49,14 +53,20 @@ const commercialButton = document.getElementById("commercial");
 
 jetButton.addEventListener("click", function() {
     rpmCalculator.style.display = "none";
+    document.getElementById("rpm-result").innerHTML = "";
+    document.getElementById("speed").value = "";
 });
 
 propellerButton.addEventListener("click", function() {
     rpmCalculator.style.display = "none";
+    document.getElementById("rpm-result").innerHTML = "";
+    document.getElementById("speed").value = "";
 });
 
 commercialButton.addEventListener("click", function() {
     rpmCalculator.style.display = "none";
+    document.getElementById("rpm-result").innerHTML = "";
+    document.getElementById("speed").value = "";
 });
 
 // ↓ Start of the program for flight searching.
@@ -369,7 +379,7 @@ async function fetchFlightData() {
 
 // ↓ This is where everything is activated accordingly.
 
-const FlightElements = document.getElementById("FlightFetch");
+const FlightElements = document.getElementById("FlightProgram");
 
 // ↓ For hiding and showing the interface.
 function hideFlightElements() {

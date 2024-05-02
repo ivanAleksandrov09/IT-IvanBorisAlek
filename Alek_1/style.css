@@ -5,7 +5,7 @@
   font-weight: 600;
 }
 
-
+/* I've used a pseudo-element (::after) because i can't target the background-image's opacity without affecting it's children. */
 
 html {
   position: relative;
@@ -23,6 +23,8 @@ html::after {
   opacity: 0.55;
   z-index: -1;
   }
+
+
 
 #info-block {
   display: flex;
@@ -66,27 +68,94 @@ html::after {
   margin: 5px;
 }
 
-.interactives {
-  display: flex;
-  margin-top: 7%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .RPM-calculator {
-  font-size: large;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: larger;
   text-align: center;
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   width: fit-content;
   height: fit-content;
+  color: #191970;
+  margin: 7% auto;
+  padding: 10px;
   border-radius: 7px;
 }
 
 .RPM-calculator h2 {
+  color: #191970;
   font-size: 40px;
   font-weight: bold;
 }
+
+.RPM-calculator button {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 7px;
+  padding: 8px;
+  font-size: large;
+  background-color: rgb(144, 116, 255);
+  color: white;
+  cursor: pointer;
+}
+
+.RPM-calculator input {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 7px;
+  padding: 5px;
+  font-size: large;
+  color: black;
+}
+
+.RPM-calculator button:hover {
+  background-color: hsl(0, 0%, 75%);
+}
+
+
+
+#FlightDetails {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  font-size: larger;
+}
+
+#FlightDetails label {
+  margin-bottom: 10px;
+  color: #191970;
+}
+
+#FlightDetails select,
+#FlightDetails input[type="date"],
+#FlightDetails button {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 7px;
+  padding: 8px;
+  font-size: large;
+}
+
+#FlightDetails button {
+  background-color: rgb(144, 116, 255);
+  color: white;
+  cursor: pointer;
+}
+
+#FlightDetails button:hover {
+  background-color: hsl(0, 0%, 75%);
+}
+
+
 
 #infoTable {
   background-color: rgb(173, 162, 218);
@@ -96,6 +165,8 @@ html::after {
   }
   
   #infoTable th, #infoTable td {
+    font-size: large;
+    font-weight: medium;
     background-color: rgb(173, 162, 218);
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 8px;
@@ -103,12 +174,5 @@ html::after {
   }
   
   #infoTable th:hover, #infoTable td:hover {
-    background-color: #c09f9f;
+    background-color: rgb(96, 81, 168)
   }
-
-#FlightDetails {
-  font-size: large;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
