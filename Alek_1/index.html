@@ -70,22 +70,23 @@
   <div id="FlightProgram" style="display: none">
     <form autocomplete="off" id="FlightDetails">
       <div class = "inputRow">
-      <label for="originCity">Choose a European capital you want to fly from:</label>
-      <select id="originCity"></select>
+        <label for="originCity" style = "margin-left: 30%;">Choose a European capital you want to fly from:</label>
+        <select id="originCity"></select>
       </div>
 
       <div class = "inputRow">
-      <label for="destinationCity">Choose a European capital you want to fly to:</label>
-      <select id="destinationCity"></select>
+        <label for="destinationCity" style = "margin-left: 31%;">Choose a European capital you want to fly to:</label>
+        <select id="destinationCity"></select>
       </div>
 
       <div class = "inputRow">
-      <label for="flightDate" style = "margin-left: 30%;">Choose a date in the future:</label>
-      <input type="date" id="flightDate" name="flightDate">
+        <label for="flightDate" style = "margin-left: 48%;">Choose a date in the future:</label>
+        <input type="date" id="flightDate" name="flightDate">
       </div>
 
-      <button type="button" id="searchButton">Search The cheapest flights!</button>
-
+      <div id="searchButtonDiv">
+        <button type="button" id="searchButton">Search The cheapest flights!</button>
+      </div>
       
     </form>
     <table id="infoTable">

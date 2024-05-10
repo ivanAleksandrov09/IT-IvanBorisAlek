@@ -104,11 +104,7 @@ const capitalsEurope = [
     { name: "Chisinau", country: "Moldova", code: "KIV" },
     { name: "Tallinn", country: "Estonia", code: "TLL" },
     { name: "Riga", country: "Latvia", code: "RIX" },
-    { name: "Vilnius", country: "Lithuania", code: "VNO" },
-    { name: "Valletta", country: "Malta", code: "MLA" },
-    { name: "Nicosia", country: "Cyprus", code: "NIC" },
-    { name: "Luxembourg", country: "Luxembourg", code: "LUX" },
-    { name: "Andorra la Vella", country: "Andorra", code: "ALV" }
+    { name: "Vilnius", country: "Lithuania", code: "VNO" }
 ];
 
 // ↓ I added the placeholder using .unshift, because just including it in the array wouldn't work.

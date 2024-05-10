@@ -19,7 +19,7 @@ html::after {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120%;
+  height: 100%;
   opacity: 0.55;
   z-index: -1;
   }
@@ -60,7 +60,7 @@ html::after {
 }
 
 #info-block button:hover {
-  background-color: hsl(0, 0%, 75%);
+  background-color: rgba(144, 116, 255, 0.5);
   cursor: pointer;
 }
 
@@ -82,7 +82,7 @@ html::after {
   width: fit-content;
   height: fit-content;
   color: #191970;
-  margin: 7% auto;
+  margin: 5% auto;
   padding: 10px;
   border-radius: 7px;
 }
@@ -114,15 +114,22 @@ html::after {
 }
 
 .RPM-calculator button:hover {
-  background-color: hsl(0, 0%, 75%);
+  background-color: rgba(144, 116, 255, 0.5);
 }
 
 
 #FlightDetails {
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
-  margin-top: 1.5%;
-  margin-left: 30%;
+  margin-top: 5%;
+}
+
+#searchButtonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .inputRow {
@@ -132,7 +139,6 @@ html::after {
 }
 
 .inputRow label {
-  margin-right: 10px;
   color: #191970;
   margin: 0 auto;
 }
@@ -144,7 +150,7 @@ html::after {
   border-radius: 7px;
   padding: 5px 8px;
   font-size: large;
-  margin-right: 40%;
+  margin-right: 30%;
   width: fit-content;
 }
 
@@ -158,7 +164,7 @@ html::after {
 }
 
 #FlightDetails button:hover {
-  background-color: hsl(0, 0%, 75%);
+  background-color: rgba(144, 116, 255, 0.5);
 }
 
 

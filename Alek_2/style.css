@@ -19,7 +19,7 @@ html::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 145%;
+    height: 100%;
     opacity: 0.55;
     z-index: -1;
   }
@@ -35,7 +35,8 @@ html::after {
 
 
 #info-block .text-block {
-    text-align: center;
+    margin-left: 1.5%;
+    text-align: left;
     color: #191970;
     width: fit-content;
     height: fit-content;
@@ -77,11 +78,14 @@ html::after {
 }
 
 #JetButton button{
-    justify-content: center;
-    width: fit-content;
-    align-self: center;
+    background-color: rgb(144, 116, 255);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 8px;
+    cursor: pointer;
 }
 
 #JetButton button:hover {
-    color: #75a6d4;
+    background-color: rgba(144, 116, 255, 0.5);
 }
