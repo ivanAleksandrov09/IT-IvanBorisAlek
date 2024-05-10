@@ -69,14 +69,20 @@
 
   <div id="FlightProgram" style="display: none">
     <form autocomplete="off" id="FlightDetails">
-      <label for="originCity" style="margin-bottom: 10px;">Choose a European capital you want to fly from:</label>
-      <select id="originCity" style="margin-bottom: 20px;"></select>
+      <div class = "inputRow">
+      <label for="originCity">Choose a European capital you want to fly from:</label>
+      <select id="originCity"></select>
+      </div>
 
-      <label for="destinationCity" style="margin-bottom: 10px;">Choose a European capital you want to fly to:</label>
-      <select id="destinationCity" style="margin-bottom: 20px;"></select>
+      <div class = "inputRow">
+      <label for="destinationCity">Choose a European capital you want to fly to:</label>
+      <select id="destinationCity"></select>
+      </div>
 
-      <label for="flightDate" style="margin-bottom: 10px;">Choose a date in the future:</label>
-      <input type="date" id="flightDate" name="flightDate" style="margin-bottom: 40px;">
+      <div class = "inputRow">
+      <label for="flightDate" style = "margin-left: 30%;">Choose a date in the future:</label>
+      <input type="date" id="flightDate" name="flightDate">
+      </div>
 
       <button type="button" id="searchButton">Search The cheapest flights!</button>
 

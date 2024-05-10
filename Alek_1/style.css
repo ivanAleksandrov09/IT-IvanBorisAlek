@@ -19,7 +19,7 @@ html::after {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
   opacity: 0.55;
   z-index: -1;
   }
@@ -118,36 +118,42 @@ html::after {
 }
 
 
-
 #FlightDetails {
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
-  font-size: large;
+  margin-top: 1.5%;
+  margin-left: 30%;
+}
+
+.inputRow {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 5%;
-  font-size: larger;
-}
-
-#FlightDetails label {
-  margin-bottom: 10px;
-  color: #191970;
-}
-
-#FlightDetails select,
-#FlightDetails input[type="date"],
-#FlightDetails button {
   margin-bottom: 20px;
+  align-items: center;
+}
+
+.inputRow label {
+  margin-right: 10px;
+  color: #191970;
+  margin: 0 auto;
+}
+
+.inputRow select,
+.inputRow input[type="date"],
+.inputRow input[type="text"] {
   border: none;
   border-radius: 7px;
-  padding: 8px;
+  padding: 5px 8px;
   font-size: large;
+  margin-right: 40%;
+  width: fit-content;
 }
 
 #FlightDetails button {
   background-color: rgb(144, 116, 255);
   color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 8px;
   cursor: pointer;
 }
 
@@ -156,23 +162,22 @@ html::after {
 }
 
 
-
 #infoTable {
   background-color: rgb(173, 162, 218);
   margin-top: 25px;
   border-collapse: collapse;
   width: 100%;
-  }
-  
-  #infoTable th, #infoTable td {
-    font-size: large;
-    font-weight: medium;
-    background-color: rgb(173, 162, 218);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 8px;
-    text-align: center;
-  }
-  
-  #infoTable th:hover, #infoTable td:hover {
-    background-color: rgb(96, 81, 168)
-  }
+}
+
+#infoTable th, #infoTable td {
+  font-size: large;
+  font-weight: medium;
+  background-color: rgb(173, 162, 218);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  text-align: center;
+}
+
+#infoTable th:hover, #infoTable td:hover {
+  background-color: rgb(96, 81, 168)
+}
