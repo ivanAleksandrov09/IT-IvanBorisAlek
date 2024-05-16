@@ -1,16 +1,16 @@
 button {
     border: none;
     border-radius: 7px;
-    background-color: hsl(0, 0%, 95%);
+    background-color: rgb(144, 116, 255);
+    color: black;
 }
 
 button:hover {
-    background-color: hsl(0, 0%, 90%);
+    background-color: rgba(144, 116, 255, 0.5);
     cursor: pointer;
 }
 
 input {
-    background-color: hsla(115, 80%, 38%, 0.3);
     border: none;
     border-radius: 7px;
 }

@@ -43,12 +43,12 @@ h4 {
     margin-top: auto;
     text-decoration: none;
     padding: 1vh;
-    background-color: #21b014a6;
+    background-color: rgb(138, 124, 197);
     color: white;
     border: 1px solid #ddd;
     border-radius: 7px;
 }
 
 .card-button:hover {
-    background-color: #21b014;
+    background-color: rgb(162, 148, 216);
 }
