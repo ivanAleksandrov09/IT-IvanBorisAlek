@@ -6,9 +6,14 @@
   color: #191970;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 html {
   position: relative;
-  height: fit-content;
+  min-height: 100vh;
 }
 
 html::after {
@@ -22,6 +27,15 @@ html::after {
   opacity: 0.55;
   z-index: -1;
   }
+
+h1, h2, h3, h4 {
+    font-weight: bolder;
+}
+
+img {
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 7px;
+}
 
 .topnav {
     background-color: rgb(83, 69, 144);
@@ -91,5 +105,8 @@ html::after {
     bottom: 0;
     width: 100%;
     background-color: rgb(90, 80, 129);
-    border-radius: 5px;
+ }
+
+ .sticky_footer p {
+    color: white;
  }
