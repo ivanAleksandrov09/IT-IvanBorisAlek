@@ -4,7 +4,7 @@ let bikes = ["roadbike", "mountainbike", "hybridbike", "citybike"];
 let urls = [
     "https://dqh479dn9vg99.cloudfront.net/wp-content/uploads/sites/9/2018/02/canyon_ultimate_cf_slx_8_review.jpg",
     "https://upload.wikimedia.org/wikipedia/commons/9/96/Orbea_Occam_2020.jpg",
-    "https://license.citruslime.com/cs/blogs/electricbikesales/Riese-and-Muller-Hybrid-e-bike_1FAB3082.png",
+    "https://discerningcyclist.com/wp-content/uploads/2023/02/Hybrid-bike-1.jpg",
     "https://hips.hearstapps.com/hmg-prod/images/20210501-citibike-ebike-terrace-0596-1652111478.jpeg?resize=1200:*",
 ];
 

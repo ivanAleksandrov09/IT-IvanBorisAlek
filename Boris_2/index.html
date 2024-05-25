@@ -2,6 +2,10 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../global/style.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="../Boris_2/style.css" />
+<link rel="stylesheet" href="../global/style.css" />
+<link rel="stylesheet" href="../Boris_1/style.css" />
 
 <title>Transportation</title>
 </head>
@@ -24,8 +28,8 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="../Boris_1/index.html">Cycle</a>
-      <a href="../Boris_2/index.html">Cars</a>
+      <a href="../Boris_1/index.html">Bicycles</a>
+      <a href="../Boris_2/index.html">Trip Planer</a>
     </div>
   </div>
   <div class="dropdown">
@@ -39,6 +43,51 @@
   </div>
 </div>
 
+</head>
+<body>
+  <div id="info-block">
+    <div class="text-block">
+        <h1>Trip Planer</h1>
+        <p>The Land Transportation Planner is a web application designed to help you calculate routes and estimate<br>
+           costs for land transportation, including driving, cycling, and walking. The application integrates with<br>
+            mapping services to provide accurate routes and includes features such as calculating fuel costs for car<br>
+           travel, estimating toll taxes, and suggesting rest stops for long journeys.</p>
+    <div class="container">
+        <h1>Land Transportation Planner</h1>
+        <form id="routeForm">
+            <label for="start">Start:</label>
+            <input type="text" id="start" name="start" required><br><br>
+            <label for="end">End:</label>
+            <input type="text" id="end" name="end" required><br><br>
+            <label for="mode">Mode of Transport:</label>
+            <select id="mode" name="mode" onchange="toggleFuelConsumption()">
+                <option value="driving-car">Car</option>
+                <option value="cycling-regular">Bike</option>
+                <option value="foot-walking">Walking</option>
+            </select><br><br>
+            <div id="fuelConsumptionContainer">
+                <label for="fuelConsumption">Fuel Consumption (liters/100km):</label>
+                <input type="number" id="fuelConsumption" name="fuelConsumption" step="0.1" required><br><br>
+            </div>
+            <label for="currency">Currency:</label>
+            <select id="currency" name="currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="BGN">BGN</option>
+                <option value="JPY">JPY</option>
+                <option value="CNY">CNY</option>
+                <option value="RUB">RUB</option>
+            </select><br><br>
+            <input type="button" value="Calculate Route" onclick="calculateRoute()">
+        </form>
+        <div id="map"></div>
+        <div id="result"></div>
+    </div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../Boris_2/function.js"></script>
 <script src="../global/functions.js"></script>
 </body>
 </html>
