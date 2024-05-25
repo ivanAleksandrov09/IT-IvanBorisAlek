@@ -268,8 +268,19 @@ function populateTable(data, exchangeRateUsdToBgn) {
             })
         }
     }
+
+    function insertFlightWarning() {
+        const row = table.insertRow();
+        row.style.height = '45px';
+
+        const cell = row.insertCell(0);
+        cell.colSpan = 9;
+        cell.textContent = "There is no available flight at this time!";
+        cell.style.border = '1px solid rgb(173, 162, 218)';
+        cell.style.textAlign = 'center';
+    }
     
-    let fiveFlightsLimit = 0;
+    let fiveFlightsLimit = 0, availableDirect = 0, availableTwoWay = 0;
 
     // ↓ This for loop is basically for defining all the data which will go in the table.
     for (let i = 0; i < maxFlights; i++) {
@@ -292,6 +303,7 @@ function populateTable(data, exchangeRateUsdToBgn) {
                 insertEmptyRow();
             }
 
+            availableDirect = 1;
             departure = itinerary.slice_data.slice_0.flight_data.flight_0.departure;
             arrival = itinerary.slice_data.slice_0.flight_data.flight_0.arrival;
             // ↓ Here i've formatted the dates to my liking. (ex. March 3, 2024, 08:30 PM)
@@ -309,6 +321,7 @@ function populateTable(data, exchangeRateUsdToBgn) {
 
         insertEmptyRow();
 
+        availableTwoWay = 1;
         departure1 = itinerary.slice_data.slice_0.flight_data.flight_0.departure;
         arrival1 = itinerary.slice_data.slice_0.flight_data.flight_0.arrival;
         departureTime1 = new Date(departure1.datetime.date_time).toLocaleTimeString([], {year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'});
@@ -324,7 +337,11 @@ function populateTable(data, exchangeRateUsdToBgn) {
 
         fiveFlightsLimit++;
       }
-    } 
+    }
+    
+    if (availableDirect == 0 && availableTwoWay == 0) {
+        insertFlightWarning();
+    }
   }
 
 
