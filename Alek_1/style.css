@@ -1,37 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
-* {
-  font-family: 'Manrope';
-  font-weight: 600;
-}
-
-/* I've used a pseudo-element (::after) because i can't target the background-image's opacity without affecting it's children. */
-
-html {
-  position: relative;
-  height: 100%;
-}
-
-html::after {
-  background-image: linear-gradient(rgb(83, 69, 144) 0%, rgb(225, 81, 10) 100%);
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.55;
-  z-index: -1;
-  }
-
-
-
 #info-block {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top:3%;
+  margin-top: 3%;
   font-size: larger;
 }
 
@@ -75,8 +47,6 @@ html::after {
   font-weight: 600;
   font-size: larger;
   text-align: center;
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -175,7 +145,8 @@ html::after {
   width: 100%;
 }
 
-#infoTable th, #infoTable td {
+#infoTable th,
+#infoTable td {
   font-size: large;
   font-weight: medium;
   background-color: rgb(173, 162, 218);
@@ -184,6 +155,7 @@ html::after {
   text-align: center;
 }
 
-#infoTable th:hover, #infoTable td:hover {
+#infoTable th:hover,
+#infoTable td:hover {
   background-color: rgb(96, 81, 168)
 }

@@ -1,114 +1,124 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="../global/style.css" />
-    <link rel="stylesheet" href="../Alek_1/style.css" />
-    <title>Transportation</title>
-  </head>
-  <body>
-    <header class="topnav" id="myTopnav">
-      <a href="../home/home.html">Home</a>
-      <a href="../about/index.html">About</a>
-        <div class="dropdown">
-        <button class="dropbtn">Ivan
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../Ivan_1/index.html">Boat</a>
-          <a href="../Ivan_2/index.html">Submarine</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Boris
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../Boris_1/index.html">Cycle</a>
-          <a href="../Boris_2/index.html">Cars</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Aleksandar
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../Alek_1/index.html">Plane</a>
-          <a href="../Alek_2/index.html">Fighter jet</a>
-        </div>
-      </div>
-    </header>
 
-<main>
-  <div id="info-block">
-    <div class="text-block">
+<head>
+  <link rel="stylesheet" type="text/css" href="../global/style.css" />
+  <link rel="stylesheet" href="../Alek_1/style.css" />
+  <title>Transportation</title>
+</head>
+
+<body>
+  <header class="topnav" id="myTopnav">
+    <a href="../home/home.html">Home</a>
+    <a href="../about/index.html">About</a>
+    <div class="dropdown">
+      <button class="dropbtn">Ivan
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Ivan_1/index.html">Boat</a>
+        <a href="../Ivan_2/index.html">Submarine</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Boris
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Boris_1/index.html">Bicycle</a>
+        <a href="../Boris_2/index.html">Trip Planner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Aleksandar
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Alek_1/index.html">Plane</a>
+        <a href="../Alek_2/index.html">Fighter jet</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="info-block">
+      <div class="text-block">
         <h1>Air transportation: Planes</h1>
-        <p>Planes are the most important transportations for long-distance travel. They can also be used to<br>carry cargo, firefighting, military purposes and to do fun activies like parachuting. Common airplanes are:</p>
+        <p>Planes are the most important transportations for long-distance travel. They can also be used to<br>carry
+          cargo, firefighting, military purposes and to do fun activies like parachuting. Common airplanes are:</p>
         <ul>
-          <li><button id="jet" > <em>Jet aircraft</em>: Very fast planes with jet engines.</button></li>
-          <li><button id="propeller" > <em>Propeller aircraft</em>: Planes that use propellers to thrust forward.</button></li>
-          <li><button id="rotor" > <em>Rotorcraft</em>: Aircraft which has rotors, like the helicopter. (Interactive)</button></li>
-          <li><button id="commercial" > <em>Commercial aircraft</em>: Planes with aircraft engines running on fuel stored in tanks. (Interactive)</button></li>
+          <li><button id="jet"> <em>Jet aircraft</em>: Very fast planes with jet engines.</button></li>
+          <li><button id="propeller"> <em>Propeller aircraft</em>: Planes that use propellers to thrust
+              forward.</button></li>
+          <li><button id="rotor"> <em>Rotorcraft</em>: Aircraft which has rotors, like the helicopter.
+              (Interactive)</button></li>
+          <li><button id="commercial"> <em>Commercial aircraft</em>: Planes with aircraft engines running on fuel stored
+              in tanks. (Interactive)</button></li>
         </ul>
+      </div>
+
+      <div class="image-container">
+        <img src="https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2023/12/727.jpg"
+          alt="Commercial Boeing 727" width="500" height="300" id="image-id">
+      </div>
     </div>
 
-    <div class="image-container">
-      <img src="https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2023/12/727.jpg" alt="Commercial Boeing 727" width="500" height="300" id="image-id">
+    <div class="RPM-calculator" style="display: none;">
+      <h2>Calculate RPM (Revolutions per minute)!</h2>
+
+      <label for="speed">Enter exact time in seconds for the rotor to complete a full spin:</label>
+      <input type="number" id="speed" name="speed" min="0" max="10000">
+      <br><br>
+      <button id="rpm-button">Calculate</button>
+
+      <p id="rpm-result">Result: </p>
     </div>
-  </div>
 
-  <div class="RPM-calculator" style = "display: none;">
-    <h2>Calculate RPM (Revolutions per minute)!</h2>
+    <div id="FlightProgram" style="display: none">
+      <form autocomplete="off" id="FlightDetails">
+        <div class="inputRow">
+          <label for="originCity" style="margin-left: 30%;">Choose a European capital you want to fly from:</label>
+          <select id="originCity"></select>
+        </div>
 
-    <label for="speed">Enter exact time in seconds for the rotor to complete a full spin:</label>
-    <input type="number" id="speed" name="speed" min="0" max="10000">
-    <br><br>
-    <button id="rpm-button">Calculate</button>
+        <div class="inputRow">
+          <label for="destinationCity" style="margin-left: 31%;">Choose a European capital you want to fly to:</label>
+          <select id="destinationCity"></select>
+        </div>
 
-    <p id="rpm-result">Result: </p>
-  </div>
+        <div class="inputRow">
+          <label for="flightDate" style="margin-left: 48%;">Choose a date in the future:</label>
+          <input type="date" id="flightDate" name="flightDate">
+        </div>
 
-  <div id="FlightProgram" style="display: none">
-    <form autocomplete="off" id="FlightDetails">
-      <div class = "inputRow">
-        <label for="originCity" style = "margin-left: 30%;">Choose a European capital you want to fly from:</label>
-        <select id="originCity"></select>
-      </div>
+        <div id="searchButtonDiv">
+          <button type="button" id="searchButton">Search The cheapest flights!</button>
+        </div>
 
-      <div class = "inputRow">
-        <label for="destinationCity" style = "margin-left: 31%;">Choose a European capital you want to fly to:</label>
-        <select id="destinationCity"></select>
-      </div>
-
-      <div class = "inputRow">
-        <label for="flightDate" style = "margin-left: 48%;">Choose a date in the future:</label>
-        <input type="date" id="flightDate" name="flightDate">
-      </div>
-
-      <div id="searchButtonDiv">
-        <button type="button" id="searchButton">Search The cheapest flights!</button>
-      </div>
-      
-    </form>
-    <table id="infoTable">
-      <tr>
-        <th>Origin City</th>
-        <th>Origin Airport</th>
-        <th>Destination City</th>
-        <th>Destination Airport</th>
-        <th>Total Price (BGN)</th>
-        <th>Departure Time (Local Time)</th>
-        <th>Arrival Time (Local Time)</th>
-        <th>Flight type</th>
-        <th>Airline</th>
-      </tr>
-      <tbody id="flightTable">
-      </tbody>
-    </table>
-  </div>
-</main>
-
-    <script src="functions.js"></script>
-    <script src="../global/functions.js"></script>
-
-  </body>
+      </form>
+      <table id="infoTable">
+        <tr>
+          <th>Origin City</th>
+          <th>Origin Airport</th>
+          <th>Destination City</th>
+          <th>Destination Airport</th>
+          <th>Total Price (BGN)</th>
+          <th>Departure Time (Local Time)</th>
+          <th>Arrival Time (Local Time)</th>
+          <th>Flight type</th>
+          <th>Airline</th>
+        </tr>
+        <tbody id="flightTable">
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer>
+    <div class="sticky_footer">
+        <p>&copy; 2024 Transportation. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="functions.js"></script>
+  <script src="../global/functions.js"></script>
+</body>
 </html>

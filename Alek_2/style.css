@@ -1,35 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
-* {
-    font-family: 'Manrope';
-    font-weight: 600;
-}
-
-
-
-html {
-    position: relative;
-    height: 100%;
-}
-
-html::after {
-    background-image: linear-gradient(rgb(83, 69, 144) 0%, rgb(225, 81, 10) 100%);
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.55;
-    z-index: -1;
-  }
-
 #info-block {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top:1%;
+    margin-top: 1%;
     font-size: larger;
 }
 
@@ -67,7 +41,7 @@ html::after {
 
 #fighterJetImage {
     width: 30%;
-    align-self: center; 
+    align-self: center;
     height: 400px;
 }
 
@@ -77,7 +51,7 @@ html::after {
     text-align: center;
 }
 
-#JetButton button{
+#JetButton button {
     background-color: rgb(144, 116, 255);
     color: white;
     border: none;

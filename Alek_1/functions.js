@@ -12,7 +12,7 @@ for (let i = 0; i < planes.length; i++) {
     const button = document.getElementById(planes[i]);
     button.addEventListener('click', function updateImage() {
         let image = document.getElementById("image-id");
-      
+
         image.src = urls[i];
         image.alt = planes[i];
     });
@@ -23,7 +23,7 @@ for (let i = 0; i < planes.length; i++) {
 const rotorButton = document.getElementById("rotor");
 const rpmCalculator = document.getElementsByClassName("RPM-calculator")[0];
 
-rotorButton.addEventListener("click", function() {
+rotorButton.addEventListener("click", function () {
     rpmCalculator.style.display = "block";
 });
 
@@ -31,7 +31,7 @@ rotorButton.addEventListener("click", function() {
 
 const rpm_button = document.getElementById("rpm-button");
 
-rpm_button.addEventListener("click", function() {
+rpm_button.addEventListener("click", function () {
     const rpm_result = document.getElementById("rpm-result");
     const speed = document.getElementById("speed").value;
     let result;
@@ -51,19 +51,19 @@ const jetButton = document.getElementById("jet");
 const propellerButton = document.getElementById("propeller");
 const commercialButton = document.getElementById("commercial");
 
-jetButton.addEventListener("click", function() {
+jetButton.addEventListener("click", function () {
     rpmCalculator.style.display = "none";
     document.getElementById("rpm-result").innerHTML = "";
     document.getElementById("speed").value = "";
 });
 
-propellerButton.addEventListener("click", function() {
+propellerButton.addEventListener("click", function () {
     rpmCalculator.style.display = "none";
     document.getElementById("rpm-result").innerHTML = "";
     document.getElementById("speed").value = "";
 });
 
-commercialButton.addEventListener("click", function() {
+commercialButton.addEventListener("click", function () {
     rpmCalculator.style.display = "none";
     document.getElementById("rpm-result").innerHTML = "";
     document.getElementById("speed").value = "";
@@ -115,7 +115,7 @@ const destinationDropdown = document.getElementById('destinationCity');
 
 
 
-capitalsEurope.forEach(function(capital) {
+capitalsEurope.forEach(function (capital) {
     const optionOrigin = document.createElement('option');
 
     //The capital code is the only way i can fetch the flight data.
@@ -142,7 +142,7 @@ destinationDropdown.value = "Choose a capital";
 
 
 // ↓ This event listener awaits a origin city dropdown change.
-originDropdown.addEventListener('change', function() {
+originDropdown.addEventListener('change', function () {
     // ↓ this.value refers to the the newly selected capital.
     const selectedCode = this.value;
     const inputElement = document.getElementById('originCity');
@@ -150,7 +150,7 @@ originDropdown.addEventListener('change', function() {
 });
 
 // ↓ This event listener awaits a destination city dropdown change.
-destinationDropdown.addEventListener('change', function() {
+destinationDropdown.addEventListener('change', function () {
     const selectedCode = this.value;
     const inputElement = document.getElementById('destinationCity');
     inputElement.value = selectedCode;
@@ -185,7 +185,7 @@ function populateTable(data, exchangeRateUsdToBgn) {
     const itineraryValues = Object.values(itineraryData);
 
     //Complicated sorting: "a" and "b" represent 2 itineraries (flights).
-    const sortedItineraries = itineraryValues.sort(function(a, b) {
+    const sortedItineraries = itineraryValues.sort(function (a, b) {
         //a.slice_data.slice_0.flight_data refers to how much flights there are in a certain itinerary.
         //I want the flight sorting to be like this: From the cheapest direct flights to the most expensive and then the cheapest flight with one transfer.
         //The 2 bottom lines get the amount of flights in an itinerary. The JSON for that is like this:
@@ -196,7 +196,7 @@ function populateTable(data, exchangeRateUsdToBgn) {
         // ↓ If this returns negative, A is sorted before B. if it is positive, B is sorted before A. 
         return flightsCountA - flightsCountB;
     });
-    
+
     const maxFlights = sortedItineraries.length;
 
     // ↓ This is the function for adding a row to the table and filling it with data.
@@ -212,11 +212,11 @@ function populateTable(data, exchangeRateUsdToBgn) {
         const departureAirport = departure.airport.name || `${originCityName} airport`;
         const arrivalCity = arrival.airport.city || destinationCityName;
         const arrivalAirport = arrival.airport.name || `${destinationCityName} airport`;
-    
+
         // ↓ These are the definitions which will be used for live currency calculations in fetchFlightData using an API. This is needed because the API returns flight prices in USD.
         totalFareUSD = priceDetails.display_total_fare;
         totalFareBGN = totalFareUSD * exchangeRateUsdToBgn;
-    
+
         // ↓ This just uses all the variables provided to fill the row with the info.
         const row = table.insertRow();
         row.insertCell(0).textContent = departureCity;
@@ -250,9 +250,9 @@ function populateTable(data, exchangeRateUsdToBgn) {
         // ↓ Access the css so the empty rows are bigger.
         row.style.height = '25px';
         for (let i = 0; i < 8; i++) {
-            row.insertCell(i).textContent = "";    
+            row.insertCell(i).textContent = "";
         }
-        
+
         //All the cells in a row are all the <td> elements.
         let cells = row.getElementsByTagName('td');
         // ↓ This for loop cycles between all the cells and removes their borders, aswell as removing their hover color properties.
@@ -260,16 +260,27 @@ function populateTable(data, exchangeRateUsdToBgn) {
             cell.style.borderTop = '1px solid rgb(173, 162, 218)';
             cell.style.borderRight = '1px solid rgb(173, 162, 218)';
             cell.style.borderLeft = '1px solid rgb(173, 162, 218)';
-            row.addEventListener('mouseover',function(){
-                cell.style.display="block";
+            row.addEventListener('mouseover', function () {
+                cell.style.display = "block";
             })
-            row.addEventListener('mouseleave',function(){
-                cell.style.display="none";
+            row.addEventListener('mouseleave', function () {
+                cell.style.display = "none";
             })
         }
     }
-    
-    let fiveFlightsLimit = 0;
+
+    function insertFlightWarning() {
+        const row = table.insertRow();
+        row.style.height = '45px';
+
+        const cell = row.insertCell(0);
+        cell.colSpan = 9;
+        cell.textContent = "There is no available flight at this time!";
+        cell.style.border = '1px solid rgb(173, 162, 218)';
+        cell.style.textAlign = 'center';
+    }
+
+    let fiveFlightsLimit = 0, availableDirect = 0, availableTwoWay = 0;
 
     // ↓ This for loop is basically for defining all the data which will go in the table.
     for (let i = 0; i < maxFlights; i++) {
@@ -279,7 +290,7 @@ function populateTable(data, exchangeRateUsdToBgn) {
         const flightsCount = Object.keys(itinerary.slice_data.slice_0.flight_data).length;
 
         let departure, arrival, departureTime, arrivalTime, departure1, arrival1, departureTime1, arrivalTime1, departure2, arrival2, departureTime2, arrivalTime2;
-        
+
         priceDetails = itinerary.price_details;
         totalFareUSD = priceDetails.display_total_fare;
         totalFareBGN = totalFareUSD * exchangeRateUsdToBgn;
@@ -287,45 +298,51 @@ function populateTable(data, exchangeRateUsdToBgn) {
         if (flightsCount === 1 && totalFareBGN.toFixed(0) < 500) {
 
             if (i != 0) {
-            //Add an empty row below the header row
+                //Add an empty row below the header row
             } else {
                 insertEmptyRow();
             }
 
+            availableDirect = 1;
             departure = itinerary.slice_data.slice_0.flight_data.flight_0.departure;
             arrival = itinerary.slice_data.slice_0.flight_data.flight_0.arrival;
             // ↓ Here i've formatted the dates to my liking. (ex. March 3, 2024, 08:30 PM)
-            departureTime = new Date(departure.datetime.date_time).toLocaleTimeString([], {year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'});
-            arrivalTime = new Date(arrival.datetime.date_time).toLocaleTimeString([], {year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'});
+            departureTime = new Date(departure.datetime.date_time).toLocaleTimeString([], { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            arrivalTime = new Date(arrival.datetime.date_time).toLocaleTimeString([], { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
             // ↓ Insert a row with the data, also add "Direct flight" as the flight type as a parameter.
             insertFlightRow(itinerary, departure, arrival, departureTime, arrivalTime, originCityName, destinationCityName, exchangeRateUsdToBgn, table, "Direct flight");
 
-    } else if (flightsCount === 2) {
+        } else if (flightsCount === 2) {
 
-        //I only want a one-transfer flight to be displayed 5 times, so I make sure i keep track of that.
-        if (fiveFlightsLimit == 5) {
-            break;
+            //I only want a one-transfer flight to be displayed 5 times, so I make sure i keep track of that.
+            if (fiveFlightsLimit == 5) {
+                break;
+            }
+
+            insertEmptyRow();
+
+            availableTwoWay = 1;
+            departure1 = itinerary.slice_data.slice_0.flight_data.flight_0.departure;
+            arrival1 = itinerary.slice_data.slice_0.flight_data.flight_0.arrival;
+            departureTime1 = new Date(departure1.datetime.date_time).toLocaleTimeString([], { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            arrivalTime1 = new Date(arrival1.datetime.date_time).toLocaleTimeString([], { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            insertFlightRow(itinerary, departure1, arrival1, departureTime1, arrivalTime1, originCityName, destinationCityName, exchangeRateUsdToBgn, table, "Middle point");
+
+            departure2 = itinerary.slice_data.slice_0.flight_data.flight_1.departure;
+            arrival2 = itinerary.slice_data.slice_0.flight_data.flight_1.arrival;
+            departureTime2 = new Date(departure2.datetime.date_time).toLocaleTimeString([], { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            arrivalTime2 = new Date(arrival2.datetime.date_time).toLocaleTimeString([], { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            insertFlightRow(itinerary, departure2, arrival2, departureTime2, arrivalTime2, originCityName, destinationCityName, exchangeRateUsdToBgn, table, "Final destination");
+
+
+            fiveFlightsLimit++;
         }
+    }
 
-        insertEmptyRow();
-
-        departure1 = itinerary.slice_data.slice_0.flight_data.flight_0.departure;
-        arrival1 = itinerary.slice_data.slice_0.flight_data.flight_0.arrival;
-        departureTime1 = new Date(departure1.datetime.date_time).toLocaleTimeString([], {year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'});
-        arrivalTime1 = new Date(arrival1.datetime.date_time).toLocaleTimeString([], {year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'});
-        insertFlightRow(itinerary, departure1, arrival1, departureTime1, arrivalTime1, originCityName, destinationCityName, exchangeRateUsdToBgn, table, "Middle point");
-
-        departure2 = itinerary.slice_data.slice_0.flight_data.flight_1.departure;
-        arrival2 = itinerary.slice_data.slice_0.flight_data.flight_1.arrival;
-        departureTime2 = new Date(departure2.datetime.date_time).toLocaleTimeString([], {year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'});
-        arrivalTime2 = new Date(arrival2.datetime.date_time).toLocaleTimeString([], {year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'});
-        insertFlightRow(itinerary, departure2, arrival2, departureTime2, arrivalTime2, originCityName, destinationCityName, exchangeRateUsdToBgn, table, "Final destination");
-
-
-        fiveFlightsLimit++;
-      }
-    } 
-  }
+    if (availableDirect == 0 && availableTwoWay == 0) {
+        insertFlightWarning();
+    }
+}
 
 
 
@@ -368,9 +385,10 @@ async function fetchFlightData() {
         } catch (error) {
             console.error(error);
         } // ↓ Right here for some reason there was an error without a second catch.
-        } catch (error) {
-            console.error(error);
-        }}
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 
 // ↓ This is where everything is activated accordingly.
@@ -403,7 +421,7 @@ function clearTable() {
 
 let searchButtonClicked = false;
 
-document.getElementById("searchButton").addEventListener("click", function() {
+document.getElementById("searchButton").addEventListener("click", function () {
     if (searchButtonClicked == true) {
         clearTable();
         fetchFlightData();
