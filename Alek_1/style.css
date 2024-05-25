@@ -35,7 +35,7 @@ html::after {
   height: 100%;
   opacity: 0.55;
   z-index: -1;
-  }
+}
 
 
 
@@ -44,7 +44,7 @@ html::after {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top:3%;
+  margin-top: 3%;
   font-size: larger;
 }
 
@@ -186,7 +186,8 @@ html::after {
   width: 100%;
 }
 
-#infoTable th, #infoTable td {
+#infoTable th,
+#infoTable td {
   font-size: large;
   font-weight: medium;
   background-color: rgb(173, 162, 218);
@@ -195,6 +196,7 @@ html::after {
   text-align: center;
 }
 
-#infoTable th:hover, #infoTable td:hover {
+#infoTable th:hover,
+#infoTable td:hover {
   background-color: rgb(96, 81, 168)
 }
