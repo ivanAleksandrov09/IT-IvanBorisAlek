@@ -6,8 +6,6 @@
   color: #191970;
 }
 
-
-
 html {
   position: relative;
   min-height: 100vh;
@@ -19,7 +17,7 @@ body {
 }
 
 main {
-    padding-bottom: 54px; /* Displaces the footer by it's height to prevent element overlapping (hopefully)*/
+    padding-bottom: 5.4vh; /* Displaces the footer by it's height to prevent element overlapping (hopefully)*/
 }
 
 html::after {
@@ -135,6 +133,7 @@ button:hover {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1000; /* ensures the footer is on top */
     background-color: rgb(90, 80, 129);
  }
 
