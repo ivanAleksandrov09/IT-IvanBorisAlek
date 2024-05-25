@@ -1,23 +1,6 @@
-button {
-    border: none;
-    border-radius: 7px;
-    background-color: hsl(0, 0%, 95%);
-}
-
-button:hover {
-    background-color: hsl(0, 0%, 90%);
-    cursor: pointer;
-}
-
 #info-block button:hover {
     background-color: hsl(0, 0%, 60%);
     cursor: pointer;
-}
-
-input {
-    background-color: hsla(115, 80%, 38%, 0.3);
-    border: none;
-    border-radius: 7px;
 }
 
 #info-block {

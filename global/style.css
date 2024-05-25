@@ -6,14 +6,20 @@
   color: #191970;
 }
 
+
+
+html {
+  position: relative;
+  min-height: 100vh;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-html {
-  position: relative;
-  min-height: 100vh;
+main {
+    padding-bottom: 54px; /* Displaces the footer by it's height to prevent element overlapping (hopefully)*/
 }
 
 html::after {
@@ -35,6 +41,30 @@ h1, h2, h3, h4 {
 img {
     border: 1px solid hsl(0, 0%, 80%);
     border-radius: 7px;
+}
+
+input {
+    border: none;
+    border-radius: 7px;
+}
+
+select {
+    background-color: rgb(144, 116, 255);
+    border: none;
+    border-radius: 7px;
+    color: black;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(144, 116, 255);
+    color: black;
+}
+
+button:hover {
+    background-color: rgba(144, 116, 255, 0.5);
+    cursor: pointer;
 }
 
 .topnav {

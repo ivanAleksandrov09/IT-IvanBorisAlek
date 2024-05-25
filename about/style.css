@@ -48,9 +48,8 @@
  
 .project-description {
     padding: 2em;
-    background-color: #f7f7f7;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    margin-top: 5vh;
+    background-color: hsl(251, 100%, 91%);
     text-align: center;
 }
 
