@@ -24,23 +24,9 @@
   margin-bottom: 1%;
 }
 
-#info-block button {
-  border: none;
-  border-radius: 7px;
-  background-color: rgb(144, 116, 255);
-  font-size: medium;
-}
-
-#info-block button:hover {
-  background-color: rgba(144, 116, 255, 0.5);
-  cursor: pointer;
-}
-
 #info-block .text-block li {
   margin: 5px;
 }
-
-
 
 .RPM-calculator {
   font-family: 'Manrope', sans-serif;

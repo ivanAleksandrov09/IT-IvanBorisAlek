@@ -16,17 +16,7 @@ for (let i = 0; i < bikes.length; i++) {
         image.src = urls[i];
         image.alt = bikes[i];
     });
-}
-
-// Boris`s js function for the dropdown topnav
-function dropMenu() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+}   
 
 for (let i = 0; i < bikes.length; i++) {
     const button = document.getElementById(bikes[i]);
@@ -53,6 +43,9 @@ function calculateCaloriesBurned() {
             break;
         case "high":
             MET = 8; 
+            break;
+        case "extreme":
+            MET = 10; 
             break;
         default:
             MET = customMET || 6;

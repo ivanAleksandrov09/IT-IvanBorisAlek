@@ -1,8 +1,3 @@
-#info-block button:hover {
-    background-color: hsl(0, 0%, 60%);
-    cursor: pointer;
-}
-
 #info-block {
     display: flex;
     justify-content: space-around;

@@ -21,18 +21,6 @@
     font-weight: bolder;
 }
 
-#info-block button {
-    border: none;
-    border-radius: 7px;
-    background-color: rgb(144, 116, 255);
-    font-size: medium;
-}
-
-#info-block button:hover {
-    background-color: hsl(0, 0%, 75%);
-    cursor: pointer;
-}
-
 #RandomJet {
     justify-content: center;
     text-align: center;
@@ -49,17 +37,4 @@
     margin-top: 1%;
     justify-content: center;
     text-align: center;
-}
-
-#JetButton button {
-    background-color: rgb(144, 116, 255);
-    color: white;
-    border: none;
-    border-radius: 7px;
-    padding: 5px 8px;
-    cursor: pointer;
-}
-
-#JetButton button:hover {
-    background-color: rgba(144, 116, 255, 0.5);
 }

@@ -7,15 +7,6 @@
     margin-top: 2cm;
 }
  
-.sticky_footer {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #12640bfd;
-    border-radius: 5px;
-}
- 
 .team {
     padding: 0.25em;
     text-align: center;
